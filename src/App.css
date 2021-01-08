@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgba(14, 205, 253, 0.884);
+}
+ul {
+  list-style: none;
+}
+.App {
+  margin:auto ;
+  max-width: 500px;
+}
+
+.listTask .wrapItem {
+  border: 1px solid gray;
+  padding: 15px;
+  margin: 0px 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  border-radius: 5px;
+  justify-content: space-between; 
+  width: 82%;
+}
+.listTask .wrapItem.staroutlined {
+ display: flex;
+}
+.listTask .wrapItem label {
+  margin-left: 10px;
+}
+.listTask input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid gray;
+  border-radius: 100%;
+  
+}
+.listTask input[type="checkbox"]:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 0px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  -webkit-transform: rotate(45deg);
+}
+
+.listTask input[type="checkbox"]:checked {
+  background: #327dff;
+  outline: none;
+  border: 1px solid rgba(50, 125, 255, 1);
+}
+.listTask input:focus,
+.listTask input:active {
+  outline: none;
+}
+.listTask .totalComplete {
+  padding: 10px 30px;
+}
+
+.listTask .wrapItem input:checked + label {
+  text-decoration: line-through;
+  color: #968888;
+}

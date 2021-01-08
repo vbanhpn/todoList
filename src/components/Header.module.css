@@ -1,0 +1,46 @@
+.heading {
+  justify-content: space-between;
+  margin: auto;
+}
+.heading div {
+  display: flex;
+  width: 91%;
+}
+.heading div input {
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 0px 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  border-radius: 5px;
+}
+.heading div button {
+  border: 1px solid gray;
+  padding: 10px;
+  /* padding-left: 0px;  */
+  background:white;
+  /* display: flex; */
+  align-items: center;
+  align-content: center;
+  border-radius: 5px;
+  height: 2.5rem;
+  font-size: 18px;
+  width: 20%; 
+}
+.heading div button:hover  {
+  border-color: #16cc9b;
+  background-color: #f58551; 
+  border-radius: 5px;
+}
+.heading div input {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.heading h1 {
+  padding: 40px 10px; 
+  text-align: center;
+  font-size: 48px;
+}
