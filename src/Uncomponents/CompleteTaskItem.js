@@ -5,7 +5,7 @@ function CompleteTaskItem({name}) {
       <li>
         <div className="wrapItem">
           <div>
-            <input type="checkbox" />
+            <input type="checkbox" defaultChecked={true} />
             <label> {name} </label>
           </div>
           <span>

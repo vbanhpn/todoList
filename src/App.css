@@ -26,21 +26,23 @@ ul {
   justify-content: space-between; 
   width: 82%;
 }
-.listTask .wrapItem.staroutlined {
- display: flex;
+.listTask .wrapItem.staroutlined  {
+ display: flex; 
+ background-color: yellow; 
+ color: yellow;
+
 }
 .listTask .wrapItem label {
   margin-left: 10px;
 }
 .listTask input[type="checkbox"] {
-  -webkit-appearance: none;
   width: 20px;
   height: 20px;
   display: inline-block;
   background: #ffffff;
   border: 1px solid gray;
   border-radius: 100%;
-  
+  -webkit-appearance: none;
 }
 .listTask input[type="checkbox"]:after {
   content: "";
@@ -70,5 +72,5 @@ ul {
 
 .listTask .wrapItem input:checked + label {
   text-decoration: line-through;
-  color: #968888;
+  color: #f31e30;
 }
