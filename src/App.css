@@ -30,7 +30,7 @@ ul {
  display: flex; 
  background-color: yellow; 
  color: yellow;
-
+ background: #327dff;
 }
 .listTask .wrapItem label {
   margin-left: 10px;

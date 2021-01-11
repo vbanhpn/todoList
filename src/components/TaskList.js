@@ -17,7 +17,7 @@ function TaskList({ listTask }) {
       list: listTask.find((p) => {
         if (p.id === id) {
           p.isComplete = true;
-          p.Favorite = false;
+          // p.Favorite = false;
           p.DateComplete = new Date().getTime();
         }
       }),
