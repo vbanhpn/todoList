@@ -3,44 +3,44 @@ export const getTaskList =  () => {
     return ( 
         [
             {
-                id : uuidv4(),
+                Id : uuidv4(),
                 Name : "Trà sữa",
-                DateCreate: "1610091723105", //1610091723105
-                DateComplete: "", 
+                CreateDate: "1610091723105", //1610091723105
+                CompleteDate: "", 
                 Favorite: true,
-                isComplete: false
+                IsComplete: false
             },  
             {
-                id : uuidv4(),
+                Id : uuidv4(),
                 Name : "Bún chả",
-                DateCreate: "1610091723102", //1610091723105
-                DateComplete: "", 
+                CreateDate: "1610091723102", //1610091723105
+                CompleteDate: "", 
                 Favorite: false,
-                isComplete: false
+                IsComplete: false
             }, 
             {
-                id : uuidv4(),
+                Id : uuidv4(),
                 Name : "Bánh ngọt",
-                DateCreate: "1610091723104",  
-                DateComplete: "", 
+                CreateDate: "1610091723104",  
+                CompleteDate: "", 
                 Favorite: false, 
-                isComplete: false
+                IsComplete: false
             },  
             {
-                id : uuidv4(),
+                Id : uuidv4(),
                 Name : "Sữa chua",
-                DateCreate: "1610091723106",
-                DateComplete: "16100917231010", 
+                CreateDate: "1610091723106",
+                CompleteDate: "16100917231010", 
                 Favorite: false,
-                isComplete: true
+                IsComplete: true
             }, 
             {
-                id : uuidv4(),
+                Id : uuidv4(),
                 Name : "Coffee",
-                DateCreate: "1610091723107", 
-                DateComplete: "1610091723111", 
+                CreateDate: "1610091723107", 
+                CompleteDate: "1610091723111", 
                 Favorite: false, 
-                isComplete: true
+                IsComplete: true
             }, 
         ]
     )

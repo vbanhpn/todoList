@@ -1,10 +1,9 @@
 import classes from "./Header.module.css";
 import { PlusOutlined } from "@ant-design/icons";
 
-function Header( {addTodoItem, inputTodo, setInputTodo}) {
-  
+function Header({ addTodoItem, inputTodo, setInputTodo }) {
   return (
-    <header className={classes.heading} >
+    <header className={classes.heading}>
       <h1>To-do Tasks</h1>
       <div>
         <input
@@ -13,7 +12,7 @@ function Header( {addTodoItem, inputTodo, setInputTodo}) {
           value={inputTodo}
           onChange={(event) => setInputTodo(event.target.value)}
         />
-        <button onClick={() => addTodoItem()} >
+        <button onClick={() => addTodoItem()}>
           <PlusOutlined />
         </button>
       </div>
