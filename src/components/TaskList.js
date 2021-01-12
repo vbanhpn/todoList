@@ -17,7 +17,6 @@ function TaskList({ listTask }) {
             p.IsComplete = false;
             p.CompleteDate = "";
           }
-         
         }
       }),
     });
@@ -35,14 +34,8 @@ function TaskList({ listTask }) {
       }),
     });
   }
-  let listInComplete = listTask.filter((p) => p.IsComplete === false);
-  let listComplete = listTask.filter((p) => p.IsComplete === true);
-  console.log("listInComplete", listInComplete);
-  console.log("listComplete", listComplete);
-  var item = listInComplete
-    .sort(
-      ({ CreateDate: previous }, { CreateDate: current }) => previous - current
-    )
+  var item = listTask.filter((p) => p.IsComplete === false)
+    .sort(({ CreateDate: previous }, { CreateDate: current }) => previous - current)
     .sort(({ Favorite: previous }, { Favorite: current }) => current - previous)
     .map((p) => {
       return (
@@ -59,11 +52,8 @@ function TaskList({ listTask }) {
         ></TaskItem>
       );
     });
-  var itemComplete = listComplete
-    .sort(
-      ({ CompleteDate: previous }, { CompleteDate: current }) =>
-        current - previous
-    )
+  var itemComplete = listTask.filter((p) => p.IsComplete === true)
+    .sort(({ CompleteDate: previous }, { CompleteDate: current }) => current - previous)
     .map((p) => {
       return (
         <TaskItem
@@ -84,7 +74,7 @@ function TaskList({ listTask }) {
       <section className="listTask">
         <div className="totalComplete">
           <span> Incompleted: </span>
-          <span> {listInComplete.length} task </span>
+          <span> {item.length} task </span>
         </div>
         {item}
       </section>
@@ -92,7 +82,7 @@ function TaskList({ listTask }) {
         <section className="listTask">
           <div className="totalComplete">
             <span> Completed: </span>
-            <span> {listComplete.length} task </span>
+            <span> {itemComplete.length} task </span>
           </div>
           <ul>{itemComplete}</ul>
         </section>

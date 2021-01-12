@@ -19,5 +19,4 @@ function Header({ addTodoItem, inputTodo, setInputTodo }) {
     </header>
   );
 }
-
 export default Header;
