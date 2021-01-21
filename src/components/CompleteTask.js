@@ -9,7 +9,7 @@ function CompleteTask({
 }) {
   const sortedInCompletedListItem = _.orderBy(
     completeList,
-    ["completedDate"],
+    ["CompletedDate"],
     ["desc"]
   );
   return (
