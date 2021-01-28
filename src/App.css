@@ -8,11 +8,24 @@ body {
 ul {
   list-style: none;
 }
-.App {
+.App  {
   margin:auto ;
-  max-width: 500px;
+  max-width: 500px; 
+  background-color:cyan;
 }
-
+/* .App Router  {
+  border: 1px solid gray;
+  padding: 15px;
+  margin: 0px 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  border-radius: 5px;
+  justify-content: space-between; 
+  width: 82%;
+} */
 .listTask .wrapItem {
   border: 1px solid gray;
   padding: 15px;

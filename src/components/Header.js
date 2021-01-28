@@ -5,9 +5,8 @@ import { React, useState } from "react";
 import { addTodo } from "../Services/TodoService";
 // import { Spin, Space } from "antd";
 import { connect } from "react-redux"; 
-import { nameTodo } from "../redux/actionCreators"; 
-
-export function Header({ onAddTodoChange, nameTodo }) {
+import {nameTodo, userLoginSuccess } from "../redux/actionCreators"; 
+export function Header({ onAddTodoChange, nameTodo, userName }) {
   let [currentItem, setCurrentItem] = useState("");
   const handleChange = (value) => {
     setCurrentItem(value);
@@ -15,12 +14,12 @@ export function Header({ onAddTodoChange, nameTodo }) {
 
   let [, setisError] = useState(false);
   let [error, setError] = useState("");
-  let [isAdd, setIsAdd] = useState(false);
+  let [isAdding, setIsAdding] = useState(false);
   // function add todo
   const addTodoItem = async (newTaskName) => {
     try {
       setisError(false);
-      setIsAdd(true);
+      setIsAdding(true);
       await addTodo(newTaskName); 
       nameTodo(currentItem) 
       onAddTodoChange();
@@ -29,7 +28,7 @@ export function Header({ onAddTodoChange, nameTodo }) {
       setError(ex.message);
       console.log(error);
     } finally {
-      setIsAdd(false);
+      setIsAdding(false);
     }
   };
   const handleKeydown = (event) => {
@@ -39,46 +38,31 @@ export function Header({ onAddTodoChange, nameTodo }) {
       setCurrentItem("");
     }
   };
-  // const LoadingAdd = () => {
-  //   if (isAdd) {
-  //     return (
-  //       <h1>
-  //         <Space size="middle">
-  //           <Spin size="small" />
-  //           <Spin />
-  //           <Spin size="large" />
-  //         </Space>
-  //       </h1>
-  //     );
-  //   } else {
-  //     <h1>"Todo -Task"</h1>;
-  //   }
-  // };
   return (
     <header className={classes.heading}>
-     <h1>"Todo -Task"</h1>
+     <h1> Xin chào:  {userName} </h1>
       <div>
         <input
-          disabled={isAdd}
+          disabled={isAdding}
           type="text"
           placeholder="Add a task"
           value={currentItem}
           onChange={(event) =>  handleChange(event.target.value)}
           onKeyDown={(event) => handleKeydown(event)}
         />
-        <button disabled={isAdd} onClick={() => {addTodoItem(currentItem)  } }> 
+        <button disabled={isAdding} onClick={() => {addTodoItem(currentItem)  } }> 
           <PlusOutlined />
         </button>
       </div>
     </header>
   );
 }
+// let [userName, setUserName] = useState("")
 // export default Header; 
 const mapStateToProps = (state) => {
-  // alert("state :" + state.todo);
-  return { Name: state.todo 
+  console.log("state.user ", state ) 
+  return { userName: state.userLogin 
   };
 };
-
 const mapDispatchToProps = {nameTodo}
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps,mapDispatchToProps)(Header);

@@ -1,1 +1,5 @@
-export const ADD_TODO = "ADD_TODO";
+export const ADD_TODO = "ADD_TODO"; 
+export const MASKTASK_COMPLETE = "MASKTASK_COMPLETE";
+export const MASKTASK_FAVORITE = "MASKTASK_FAVORITE"; 
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS"; 
+export const LOGIN_INCORRECT = "LOGIN_INCORRECT"; 
